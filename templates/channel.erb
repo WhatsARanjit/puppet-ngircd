@@ -1,0 +1,15 @@
+[Channel]
+  Name     = <%= @name %>
+<% if @topic -%>
+  Topic    = <%= @topic %>
+<% end -%>
+  Modes    = <%= @modes %>
+<% if @key -%>
+  Key      = <%= @key %>
+<% end -%>
+<% if @keyfile -%>
+  KeyFile  = <%= @keyfile %>
+<% end -%>
+<% if @maxusers -%>
+  MaxUsers = <%= @maxusers %>
+<% end -%>

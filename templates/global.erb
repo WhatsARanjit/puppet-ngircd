@@ -1,0 +1,66 @@
+[Global]
+  Name       = <%= @server_name %>
+<% if @admin_info1 -%>
+  AdminInfo1 = <%= @admin_info1 %>
+<% end -%>
+<% if @admin_info1 -%>
+  AdminInfo1 = <%= @admin_info1 %>
+<% end -%>
+<% if @admin_info2 -%>
+  AdminInfo2 = <%= @admin_info2 %>
+<% end -%>
+  AdminEMail = <%= @admin_email %>
+  HelpFile   = <%= @help_file %>
+  Info       = <%= @info %>
+  Listen     = <%= @listen %>
+  MotdPhrase = "<%= @motd %>"
+<% if @password -%>
+  Password   = <%= @password %>
+<% end -%>
+  PidFile    = /var/run/ngircd/ngircd.pid
+  Ports      = <%= @ports.join(',') %>
+  ServerUID  = ngircd
+  ServerGID  = ngircd
+
+[Limits]
+  ConnectRetry     = <%= @connectretry %>
+  IdleTimeout      = <%= @idletimeout %>
+  MaxConnections   = <%= @maxconnections %>
+  MaxConnectionsIP = <%= @maxconnectionsip %>
+  MaxJoins         = <%= @maxjoins %>
+  MaxNickLength    = <%= @maxnicklength %>
+  MaxListSize      = <%= @maxlistsize %>
+  PingTimeout      = <%= @pingtimeout %>
+  PongTimeout      = <%= @pongtimeout %>
+
+[Options]
+  AllowedChannelTypes = <%= @allowed_channel_types %>
+  AllowRemoteOper     = <%= @allow_remote_op %>
+  ChrootDir           = <%= @chroot_dir %>
+<% if @cloak_host -%>
+  CloakHost           = <%= @cloak_host %>
+  CloakHostModeX      = <%= @cloak_host_modex %>
+  CloakHostSalt       = <%= @cloak_host_salt %>
+  CloakUserToNick     = <%= @cloak_user_to_nick %>
+<% end -%>
+  ConnectIPv4         = <%= @ipv4 %>
+  ConnectIPv6         = <%= @ipv6 %>
+<% if @user_modes -%>
+  DefaultUserModes    = <%= @user_modes %>
+<% end -%>
+  DNS                 = <%= @dns %>
+  Ident               = <%= @ident %>
+  IncludeDir          = /etc/ngircd.conf.d
+  MorePrivacy         = <%= @more_privacy %>
+  NoticeAuth          = <%= @notice_auth %>
+  OperCanUseMode      = <%= @opercanusemode %>
+  OperChanPAutoOp     = <%= @operchanpautoop %>
+  OperServerMode      = <%= @operservermode %>
+  PAM                 = no
+  RequireAuthPing     = <%= @requireauthping %>
+  ScrubCTCP           = <%= @scrubctcp %>
+  SyslogFacility      = <%= @syslogfacility %>
+<% if @webircpassword -%>
+  WebircPassword      = <%= @webircpassword %>
+<% end -%>
+

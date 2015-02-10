@@ -1,0 +1,16 @@
+{
+  "name": "puppet-ngircd",
+  "version": "0.1.0",
+  "source": "https://github.com/WhatsARanjit/puppet-ngircd",
+  "author": "WhatsARanjit",
+  "license": "Apache License, Version 2.0",
+  "summary": "Manage ngircd",
+  "description": "ngIRCd is a free, portable and lightweight Internet Relay Chat server for small or private networks, developed under the GNU General Public License",
+  "project_page": "https://github.com/WhatsARanjit/puppet-ngircd",
+  "dependencies": [
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 1.0.0"
+    }
+  ]
+}
